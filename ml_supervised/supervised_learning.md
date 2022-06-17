@@ -65,7 +65,7 @@ In the real world a single metric won't tell the entire story. That's where our 
 The accuracy in classification problems is the number of correct predictions made by the model divided by the total number of predictions. This essentially gives us a percentage.
 
 $$
-Accuracy = \frac{\text{Correct Predictions}}{\text{Total Predictions}} \times 100\%
+\text{Accuracy} = \frac{\text{Correct Predictions}}{\text{Total Predictions}} \times 100\%
 $$
 
 The accuracy metric is useful when the target classes are well balanced. In our case, that would mean that there are roughly 50% of cat images and 50% of dog images in our set.
@@ -78,14 +78,14 @@ If we would have an **unbalanced** dataset, the accuracy would not be very inter
 
 The recall is the ability of a model to find all the relevant cases within a dataset. More specifically, it is the number of *true positives* divided by the number of true positives plus the number of *false negatives*.
 $$
-Recall = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}}
+\text{Recall} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Negatives}}
 $$
 
 ##### Precision
 
 The precision is the ability of a model to identify the relevant data points. More specifically, it is the number of *true positives* divided by the number of true positives plus the number of *false positives*.
 $$
-Precision = \frac{\text{True Positives}}{\text{True Positives} + \text{False Positives}}
+\text{Precision} = \frac{\text{True Positives}}{\text{True Positives} + \text{False Positives}}
 $$
 
 ##### The trade-off
