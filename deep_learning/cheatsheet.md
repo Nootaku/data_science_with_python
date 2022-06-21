@@ -102,3 +102,21 @@ And then we assess what percentage of our data is missing for each feature:
 
 Once we know the proportion of our missing data we can make an informed decision regarding our 3 options. Obviously, if the missing data represents less than 1%, it is no problem to **drop** the missing rows. But for higher amounts we might consider **filling** or simply **keeping** the data as is.
 
+- If we decide to fill we need to be careful about how to fill it. Sometimes we can extrapolate from the column itself, but often we need to extrapolate from a highly correlated feature.
+
+  ```python
+  dataset.corr()['feature_with_missing_values']
+  ```
+
+  Then we might have to make calculations based on those 2 features:
+
+  ```python
+  def myFunction(a, b):
+      # do something
+  
+  df['feature_with_missing_values'] = dataset.apply(
+  	lambda x: myFunction(x['feature_1'], x['feature_2']), axis=1
+  )
+  ```
+
+  
